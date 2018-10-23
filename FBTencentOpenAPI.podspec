@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'FBTencentOpenAPI'
-  s.version      = '3.3.3'
+  s.version      = '3.3.3.1'
   s.summary      = 'TencentOpenAPI v3.3.3'
   s.description  = <<-DESC
                    This pod is used who want to use tencentOpenAPI v3.3.3 with podfile.
@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
                       '"SystemConfiguration"',
                       '"CoreTelephony"'
                     ]
-  the_ldflags    = '$(inherited) -lz -lsqlite3 -liconv -lstdc++ -framework ' + the_frameworks.join(' -framework ') + ''
+  the_ldflags    = '$(inherited) -lz -lsqlite3 -liconv -framework ' + the_frameworks.join(' -framework ') + ''
 
   s.xcconfig = { 'OTHER_LDFLAGS' => the_ldflags }
 
